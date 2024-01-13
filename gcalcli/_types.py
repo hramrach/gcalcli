@@ -4,7 +4,12 @@
 # must have underscore so as not to shadow stdlib types.py
 
 from datetime import datetime
-from typing import Any, Dict, List, TYPE_CHECKING, TypedDict
+from typing import Any, Dict, List, TYPE_CHECKING
+import sys
+if sys.version_info >= (3, 8):
+    from typing import TypedDict
+else:
+    from typing_extensions import TypedDict
 
 if TYPE_CHECKING:
     from googleapiclient._apis.calendar.v3.schemas \
