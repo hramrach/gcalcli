@@ -71,7 +71,7 @@ class GoogleCalendarInterface:
 
         self.details = options.get('details', {})
         # stored as detail, but provided as option: TODO: fix that
-        self.details['width'] = options.get('width', 80)
+        self.details['width'] = options.get('cal_width', 80)
         self._get_cached()
 
         self._select_cals(cal_names)
